@@ -1,32 +1,32 @@
-import { VFC } from 'react';
-import * as THREE from 'three';
-import { Plane } from '@react-three/drei';
-import { useFrame } from '@react-three/fiber';
-import { cnoise21 } from '../../modules/glsl/noise';
+import { VFC } from "react";
+import * as THREE from "three";
+import { Plane } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import { cnoise21 } from "../../modules/glsl/noise";
 
 export const Background: VFC = () => {
-	const shader: THREE.Shader = {
-		uniforms: {
-			u_time: { value: 0 },
-			u_mouse: { value: new THREE.Vector2() }
-		},
-		vertexShader,
-		fragmentShader
-	}
+  const shader: THREE.Shader = {
+    uniforms: {
+      u_time: { value: 0 },
+      u_mouse: { value: new THREE.Vector2() },
+    },
+    vertexShader,
+    fragmentShader,
+  };
 
-	const target = new THREE.Vector2()
-	useFrame(({ mouse }) => {
-		shader.uniforms.u_time.value += 0.005
-		target.set((mouse.x + 1) * 0.5, (mouse.y + 1) * 0.5)
-		shader.uniforms.u_mouse.value.lerp(target, 0.2)
-	})
+  const target = new THREE.Vector2();
+  useFrame(({ mouse }) => {
+    shader.uniforms.u_time.value += 0.005;
+    target.set((mouse.x + 1) * 0.5, (mouse.y + 1) * 0.5);
+    shader.uniforms.u_mouse.value.lerp(target, 0.2);
+  });
 
-	return (
-		<Plane args={[2, 2]}>
-			<shaderMaterial args={[shader]} />
-		</Plane>
-	)
-}
+  return (
+    <Plane args={[2, 2]}>
+      <shaderMaterial args={[shader]} />
+    </Plane>
+  );
+};
 
 const vertexShader = `
 varying vec2 v_uv;
@@ -35,7 +35,7 @@ void main() {
   v_uv = uv;
   gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
 }
-`
+`;
 
 const fragmentShader = `
 uniform float u_time;
@@ -55,7 +55,8 @@ float random(vec2 p) {
 }
 
 const vec3 black = vec3(0.0);
-const vec3 color1 = vec3(0.89, 0.34, 0.11);
+const vec3 color1 = vec3(0.0, 0.1686, 0.9961);
+
 const vec3 color2 = vec3(0.56, 0.64, 0.64);
 const vec3 color3 = vec3(0.16, 0.26, 0.47);
 
@@ -82,4 +83,4 @@ void main() {
 
   gl_FragColor = vec4(color, 1.0);
 }
-`
+`;

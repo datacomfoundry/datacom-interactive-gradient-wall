@@ -1,12 +1,15 @@
 {
   "files": {
-    "main.css": "/r3f-monopo-london/static/css/main.bd4aea60.css",
-    "main.js": "/r3f-monopo-london/static/js/main.5408cd4d.js",
-    "static/js/27.aa6a3644.chunk.js": "/r3f-monopo-london/static/js/27.aa6a3644.chunk.js",
-    "index.html": "/r3f-monopo-london/index.html"
+    "main.css": "/r3f-monopo-london/static/css/main.64c3244c.css",
+    "main.js": "/r3f-monopo-london/static/js/main.9c6b93de.js",
+    "static/js/787.4ada8ae8.chunk.js": "/r3f-monopo-london/static/js/787.4ada8ae8.chunk.js",
+    "index.html": "/r3f-monopo-london/index.html",
+    "main.64c3244c.css.map": "/r3f-monopo-london/static/css/main.64c3244c.css.map",
+    "main.9c6b93de.js.map": "/r3f-monopo-london/static/js/main.9c6b93de.js.map",
+    "787.4ada8ae8.chunk.js.map": "/r3f-monopo-london/static/js/787.4ada8ae8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd4aea60.css",
-    "static/js/main.5408cd4d.js"
+    "static/css/main.64c3244c.css",
+    "static/js/main.9c6b93de.js"
   ]
 }

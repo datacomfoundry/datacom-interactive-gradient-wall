@@ -1,7 +1,8 @@
 # About
+
 This application reproduces the effect of [Monopo London](https://monopo.london/).
 
-https://nemutas.github.io/r3f-monopo-london/
+https://black-mushroom-0b0693500.4.azurestaticapps.net/
 
 ![output(video-cutter-js com) (4)](https://user-images.githubusercontent.com/46724121/163683407-7a22bcb5-88e8-4ef8-b3d7-282284d5c8aa.gif)
 
